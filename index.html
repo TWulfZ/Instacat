@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIC CAT</title>
+    <title>API CAT</title>
 </head>
 
 <body>
-    <h1>Gatitos aletorios</h1>
-    <img alt="Foto de gatito aletorio" width="520" height="480">
-    
-    <img src="" alt="" id="1"><img src="" alt="" id="2"><img src="" alt="" id="3"><img src="" alt="" id="4"><img src="" alt="" id="5"><img src="" alt="" id="6"><img src="" alt="" id="7"><img src="" alt="" id="8"><img src="" alt="" id="9"><img src="" alt="" id="10">
-    <button>Mostrar Gato</button>
+    <h1>InstantCAT App</h1>
+    <span id="error"></span>
+    <section id="gatosAleatorios">
+        <h2>Gatitos aleatorios</h2>
+        <article>
+            <img id="img1" width="150" alt="Foto de gatito aleatorio">
+            <button>Guardar en favoritos</button>
+        </article>
+        <article>
+            <img id="img2" width="150" alt="Foto de gatito aleatorio">
+            <button>Guardar en favoritos</button>
+        </article>
+        <img id="img1" width="150" alt="Foto de gatito aleatorio">
+        <img id="img2" width="150" alt="Foto de gatito aleatorio">
 
+        <button onclick="generarGatosRandom()">Recargar</button>
+    </section>
+
+    <section id="gatosFavoritos">
+        <h2>Gatitos favoritos</h2>
+        <article>
+            <img id="img1" width="150" alt="Foto de gatito aleatorio">
+            <button>Eliminar de favoritos</button>
+        </article>
+    </section>
     <script src="./main.js"></script>
 </body>
 

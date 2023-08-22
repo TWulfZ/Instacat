@@ -4,10 +4,42 @@ const button = document.querySelector('button');
 const pfp = document.getElementsByClassName('user-profile');
 const status_wrapper = document.getElementById('historias');
 const posts = document.getElementById('publicaciones');
+const more = document.getElementById('more');
+const menu = document.getElementById('menu');
+const appearance = document.getElementById('appearance');
+const iconElement = document.querySelector('.icon');
+const logoClass = document.querySelector('.logo');
 
 const num_stat = 6; //historias
 
 console.log(API_KEY);
+
+more.addEventListener('click', function () {
+    menu.classList.toggle("hide");
+});
+
+var color = 1; //0 Blanco - 1 Negro
+appearance.addEventListener('click', function () {
+
+    if (color === 1) {
+        document.documentElement.style.setProperty('--fondo', '#000000');
+        document.documentElement.style.setProperty('--fondo2', '#202020');
+        document.documentElement.style.setProperty('--letras', '#ffffff');
+        document.documentElement.style.setProperty('--iconos', 'invert(1)');
+        document.documentElement.style.setProperty('--menu', '#202020');
+        logoClass.style.filter = 'invert(1)';
+        color--;
+    } else {
+        document.documentElement.style.setProperty('--fondo', '#fff');
+        document.documentElement.style.setProperty('--fondo2', '#dfdfdf');
+        document.documentElement.style.setProperty('--letras', '#000000');
+        document.documentElement.style.setProperty('--iconos', 'invert(0)');
+        document.documentElement.style.setProperty('--menu', '#fff');
+        iconElement.style.filter = 'invert(0)';
+        logoClass.style.filter = 'invert(0)';
+        color++;
+    }
+});
 
 function randomLike() {
     const min = 100000;
@@ -17,13 +49,15 @@ function randomLike() {
     return formattedNumber;
 }
 
-//cargar imagen de las historias
+
 fetch(`https://api.thecatapi.com/v1/images/search?limit=1&api_key=${API_KEY}`)
     .then(res => res.json())
     .then(data => {
         pfp[0].style.backgroundImage = `url('${data[0].url}')`; //Cargar imagen del usuario
+
     });
 
+//cargar imagen de las historias
 fetch(`https://api.thecatapi.com/v1/images/search?limit=${num_stat}&has_breeds=1&api_key=${API_KEY}`)
     .then(res => res.json())
     .then(data => {
@@ -41,7 +75,7 @@ fetch(`https://api.thecatapi.com/v1/images/search?limit=${num_stat}&has_breeds=1
                         <div class="profile-pic"><img src="${post.url}" alt=""></div>
                         <p class="username">${post.breeds[0].name}</p>
                     </div>
-                    <img src="img/option.PNG" class="options" alt="">
+                    <img src="img/option.PNG" class="options icon" alt="">
                 </div>
                 <img src="${post.url}" class="post-image" alt="">
                 <div class="post-content">
@@ -55,9 +89,10 @@ fetch(`https://api.thecatapi.com/v1/images/search?limit=${num_stat}&has_breeds=1
                     <p class="description"><span>${post.breeds[0].name} </span> ${post.breeds[0].description} </p>
                 </div>
                 <div class="comment-wrapper">
-                    <img src="img/smile.PNG" class="icon" alt="">
+                    
                     <input type="text" class="comment-box" placeholder="Add a comment">
                     <button class="comment-btn">post</button>
+                    <img src="img/smile.PNG" class="icon" alt="">
                 </div>
             </div>`).slice(0, num_stat).join('')}`;
 
