@@ -235,14 +235,12 @@ p {
 
 #menu {
     position: fixed;
-    top: 37%;
+    transform: translate(12px, 0vh) translate(0px, -100%);
     left: 1rem;
     width: 15rem;
     height: 5rem;
     padding: 0.5rem;
     background-color: var(--menu);
-    z-index: 9999;
-    transform: translate(12px, 548px) translate(0px, -100%);
     border-radius: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -452,6 +450,7 @@ p {
 
 .icon {
     filter: var(--iconos);
+    cursor: pointer;
 }
 
 .logo {
@@ -477,7 +476,8 @@ p {
     width: 320px;
     height: 1rem;
     display: flex;
-    justify-content: space-around;
+    padding: 0 1.2rem;
+    justify-content: space-between;
     font-size: 14px;
     margin: 1rem 0;
 }
@@ -510,4 +510,12 @@ p {
 .suggests .secondary {
     color: var(--letras-gray);
     font-size: 12px;
+}
+
+.suggest-text {
+    width: 9.5rem;
+}
+
+#profile {
+    margin-bottom: 2rem;
 }

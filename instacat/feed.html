@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Instacat</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                     </div>
                     <div class="items-selection">
                         <div class="nav-items">
-                            <img src="./img/home.PNG" class="icon" alt="">
+                            <img src="./img/homeFill.PNG" class="icon" alt="">
                             <p class="selected">Home</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             <p class="">Messages</p>
                         </div>
                     </div>
-                    <div class="items-selection">
+                    <div class="items-selection" id="favouritesBtn">
                         <div class="nav-items">
                             <img src="./img/like.PNG" class="icon" alt="">
                             <p class="">Favourites</p>
@@ -71,14 +71,14 @@
                         <div class="items-selection" id="appearance">
                             <div class="nav-items">
                                 <!--cambiar apariencia-->
-                                <img src=".img/appearance.png" class="icon" alt="">
+                                <img src="./img/appearance.png" class="icon" alt="">
                                 <p class="">Switch appearance</p>
                             </div>
                         </div>
                     </div>
                     <div class="items-selection" id="more">
                         <div class="nav-items">
-                            <img src=".img/bars.png" class="icon" alt="">
+                            <img src="./img/bars.png" class="icon" alt="">
                             <p class="">More</p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="right-col">
-                    <div class="suggests">
+                    <div class="suggests" id="profile">
                         <!--Profile-->
                         <div class="right-s">
                             <img src="./img/profile-pic.jpg" class="photos" alt="">
@@ -133,56 +133,58 @@
                             <a href="#">See all</a>
                         </div>
                     </div>
-                    <div class="suggests">
-                        <!--suggests-->
-                        <div class="right-s">
-                            <img src="./img/profile-pic.jpg" class="photos" alt="">
-                            <div class="suggest-text">
-                                <p class="">User</p>
-                                <p class="secondary">Username</p>
+                    <div id="suggestions">
+                        <div class="suggests">
+                            <!--suggests-->
+                            <div class="right-s">
+                                <img src="./img/profile-pic.jpg" class="photos" alt="">
+                                <div class="suggest-text">
+                                    <p class="">User</p>
+                                    <p class="secondary">Username</p>
+                                </div>
+                            </div>
+                            <div class="zzz">
+                                <a href="#">Follow</a>
                             </div>
                         </div>
-                        <div class="zzz">
-                            <a href="#">Switch</a>
-                        </div>
-                    </div>
-                    <div class="suggests">
-                        <!--suggests-->
-                        <div class="right-s">
-                            <img src="./img/profile-pic.jpg" class="photos" alt="">
-                            <div class="suggest-text">
-                                <p class="">User</p>
-                                <p class="secondary">Username</p>
+                        <div class="suggests">
+                            <!--suggests-->
+                            <div class="right-s">
+                                <img src="./img/profile-pic.jpg" class="photos" alt="">
+                                <div class="suggest-text">
+                                    <p class="">User</p>
+                                    <p class="secondary">Username</p>
+                                </div>
+                            </div>
+                            <div class="zzz">
+                                <a href="#">Follow</a>
                             </div>
                         </div>
-                        <div class="zzz">
-                            <a href="#">Follow</a>
-                        </div>
-                    </div>
-                    <div class="suggests">
-                        <!--suggests-->
-                        <div class="right-s">
-                            <img src="./img/profile-pic.jpg" class="photos" alt="">
-                            <div class="suggest-text">
-                                <p class="">User</p>
-                                <p class="secondary">Username</p>
+                        <div class="suggests">
+                            <!--suggests-->
+                            <div class="right-s">
+                                <img src="./img/profile-pic.jpg" class="photos" alt="">
+                                <div class="suggest-text">
+                                    <p class="">User</p>
+                                    <p class="secondary">Username</p>
+                                </div>
+                            </div>
+                            <div class="zzz">
+                                <a href="#">Follow</a>
                             </div>
                         </div>
-                        <div class="zzz">
-                            <a href="#">Follow</a>
-                        </div>
-                    </div>
-                    <div class="suggests">
-                        <!--suggests-->
-                        <div class="right-s">
-                            <img src="./img/profile-pic.jpg" class="photos" alt="">
-                            <div class="suggest-text">
-                                <p class="">User</p>
-                                <p class="secondary">Username</p>
+                        <div class="suggests">
+                            <!--suggests-->
+                            <div class="right-s">
+                                <img src="./img/profile-pic.jpg" class="photos" alt="">
+                                <div class="suggest-text">
+                                    <p class="">User</p>
+                                    <p class="secondary">Username</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="zzz">
-                            <a href="#">Follow</a>
+                            <div class="zzz">
+                                <a href="#">Follow</a>
+                            </div>
                         </div>
                     </div>
 
@@ -191,11 +193,9 @@
     </div>
     </section>
     </div>
-
-
-
     <script src="https://cdn.discordapp.com/attachments/1127797050520633434/1137768646802939974/api_key.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="./main.js"></script>
+
 </body>
 
 </html>
