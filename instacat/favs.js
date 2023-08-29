@@ -61,7 +61,7 @@ function gatosFavoritos(idImage, indexCat, idCat) {
                     <img src="${post.url}" class="post-image" alt="">
                     <div class="post-content">
                         <div class="reaction-wrapper">
-                            <img src="./img/liked.PNG" class="icon like" alt=""> 
+                            <img src="./img/liked.png" class="icon like" alt=""> 
                             <img src="./img/comment.PNG" class="icon" alt="">
                             <img src="./img/send.PNG" class="icon" alt="">
                             <img src="./img/save.PNG" class="save icon" alt="">
